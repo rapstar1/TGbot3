@@ -78,7 +78,7 @@ async def import_wallet_command(update: Update, context: ContextTypes.DEFAULT_TY
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         # Creating an inline button for opening the app
-        keyboard = [[InlineKeyboardButton("Open APP", url="https://tgapp1.onrender.com/")]]
+        keyboard = [[InlineKeyboardButton("Open APP", url="https://tgbot3.onrender.com/")]]
         reply_markup = InlineKeyboardMarkup(keyboard)
 
         # Sending a message with the inline button
