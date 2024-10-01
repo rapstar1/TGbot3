@@ -3,7 +3,7 @@ function createWallet() {
     document.getElementById('createWallet').disabled = true;
 
     // 模拟API调用
-    fetch('https://tgapp1.onrender.com/api/create-wallet', {  
+    fetch('https://tgbot3.onrender.com/api/create-wallet', {  
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
