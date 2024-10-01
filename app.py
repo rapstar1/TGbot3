@@ -46,7 +46,7 @@ def api_import_wallet():
 async def create_wallet_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         # Make a request to Flask API to create a wallet
-        response = requests.post('https://tgapp1.onrender.com/api/create-wallet')  # 确保Flask应用的URL正确
+        response = requests.post('https://tgbot3.onrender.com/api/create-wallet')  # 确保Flask应用的URL正确
         result = response.json()
         if 'error' in result:
             await update.message.reply_text(f"Error: {result['error']}")
@@ -65,7 +65,7 @@ async def import_wallet_command(update: Update, context: ContextTypes.DEFAULT_TY
             return
         
         # Make a request to Flask API to import a wallet
-        response = requests.post('https://tgapp1.onrender.com/api/import-wallet', json={'wallet_data': wallet_data})
+        response = requests.post('https://tgbot3.onrender.com/api/import-wallet', json={'wallet_data': wallet_data})
         result = response.json()
         if 'error' in result:
             await update.message.reply_text(f"Error: {result['error']}")
