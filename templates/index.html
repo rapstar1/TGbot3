@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <!-- 添加user-scalable=no -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Web3 钱包</title>
+    <!-- 引入字体和样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- 引入JavaScript文件 -->
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部菜单项 -->
+        <div id="mainMenu" class="menu fixed-top">
+            <div class="menu-item">
+                <i class="fas fa-gift icon"></i>
+                <p>邀请拿奖</p>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-hammer icon"></i>
+                <p>Poolx</p>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-wallet icon"></i>
+                <p>充值</p>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-bolt icon"></i>
+                <p>闪兑</p>
+            </div>
+        </div>
+
+        <!-- 中间的钱包操作部分 -->
+        <div class="wallet-section">
+            <div id="walletContainer" class="wallet-container">
+                <!-- 初始状态显示两个按钮 -->
+                <button id="createWallet" class="wallet-btn" onclick="createWallet()">创建钱包</button>
+                <button id="importWallet" class="wallet-btn" onclick="importWallet()">导入钱包</button>
+            </div>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <div class="footer-menu fixed-bottom">
+            <div class="footer-item">
+                <i class="fas fa-home footer-icon"></i>
+                <p>首页</p>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-coins footer-icon"></i>
+                <p>领取利金</p>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-user-friends footer-icon"></i>
+                <p>邀请拿奖</p>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-chart-bar footer-icon"></i>
+                <p>行情</p>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-user footer-icon"></i>
+                <p>我的</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

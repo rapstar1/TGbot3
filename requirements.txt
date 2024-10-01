@@ -1,0 +1,6 @@
+Flask
+flask-cors
+requests
+python-telegram-bot
+gunicorn
+mnemonic

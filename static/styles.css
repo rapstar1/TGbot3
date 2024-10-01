@@ -1,0 +1,167 @@
+/* 基础样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    height: 100vh;
+    overflow-x: hidden;
+    font-size: 16px; /* 基准字体大小 */
+}
+
+/* 容器样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 60px; /* 顶部菜单高度 */
+    padding-bottom: 60px; /* 底部导航高度 */
+}
+
+/* 顶部菜单样式 */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    height: 60px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.menu-item {
+    text-align: center;
+    flex: 1;
+}
+
+.icon {
+    font-size: 1.5rem; /* 使用相对单位 */
+    color: #4CAF50;
+}
+
+.menu-item p {
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: #333333;
+}
+
+/* 中间钱包操作部分 */
+.wallet-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.wallet-btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wallet-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 钱包信息显示部分 */
+#walletInfo {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#walletInfo h2 {
+    color: #4CAF50;
+}
+
+#walletInfo p {
+    word-wrap: break-word;
+    font-size: 0.875rem;
+    margin: 10px 0;
+}
+
+/* 底部导航栏 */
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    height: 60px;
+    border-top: 1px solid #eaeaea;
+}
+
+.footer-item {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    color: #666666;
+}
+
+.footer-item p {
+    font-size: 0.75rem;
+    margin-top: 5px;
+    color: #333333;
+}
+
+/* 固定位置样式 */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .icon, .footer-icon {
+        font-size: 1.25rem;
+    }
+
+    .wallet-btn {
+        padding: 12px;
+        font-size: 0.875rem;
+    }
+
+    .menu-item p, .footer-item p {
+        font-size: 0.625rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wallet-btn {
+        padding: 10px;
+        font-size: 0.75rem;
+    }
+
+    .menu-item p, .footer-item p {
+        font-size: 0.5rem;
+    }
+}
