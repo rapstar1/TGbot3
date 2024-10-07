@@ -57,9 +57,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    width: 90%;
-    max-width: 400px;
+    gap: 80px; /* 增加按钮之间的间距 */
+    width: 95%; /* 增加容器宽度 */
+    max-width: 700px; /* 增加最大宽度 */
     text-align: center;
 }
 
@@ -73,14 +73,18 @@ body {
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px; /* 额外增加按钮之间的间距，防止特殊情况下间距不一致 */
 }
 
-.wallet-btn:hover {
+.wallet-btn:last-child {
+    margin-bottom: 0; /* 防止最后一个按钮底部有额外的间距 */
+}
+
+.wallet-btn:hover {  
     background-color: #45a049;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* 钱包信息显示部分 */
 #walletInfo {
     background-color: #ffffff;
     padding: 20px;
